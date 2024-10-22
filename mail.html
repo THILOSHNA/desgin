@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Code</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for the form */
+        body {
+            background-position: top right;
+            background-image: linear-gradient(rgba(126, 87, 194), rgba(255, 205, 210));
+            color: rgb(65, 19, 108);
+            color-scheme: normal light dark;
+            background-size: cover;
+            height: 100vh; /* Adjust the height for better visibility */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px; /* Adjust the width as needed */
+            background: #fffeff;
+            padding: 50px 60px 70px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            color: rgb(65, 19, 108);
+        }
+
+        h1::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            border-radius: 5px;
+            background: #462f6a;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #462f6a;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #5f4399;
+        }
+    </style>
+</head>
+<body>
+    <form action="/send_code" method="post">
+        <h1>Send Verification Code</h1>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Send Code</button>
+    </form>
+</body>
+</html>
